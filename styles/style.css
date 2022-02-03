@@ -33,7 +33,7 @@ h1 {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    margin-top: 130px;
+    margin-top: 110px;
     padding-bottom: 35px;
     width: 75%;
     gap: 34px 34px;
@@ -64,7 +64,7 @@ img{
 }
 
 .back-face{
-    background-image: url(/imgs/front.png);
+    background-image: url("/projeto4-parrotscardgame/front.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100px; 
@@ -74,109 +74,24 @@ img{
     display: flex;
     text-align: center;
     justify-content: center;
-   transform: rotateY(180deg);
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* .pagina {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-header {
-    
-    margin: 40px auto 50px auto;
-}
-
-h1 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-family: 'Roboto', sans-serif;
-    font-size: 56px;
-    font-weight: 700;
-    color: #75B79E;
-}
-
-main {
-    display: flex;
-    flex-wrap: wrap;
-
-    margin: 0 190px 0 120px;
-}
-
-.card {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-
-    margin-left: 150px;
-    margin-bottom: 180px;
-}
-
-.face {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 0;
-
-    
-    background-color: #A7E9AF;
-    width: 117px;
-    height: 146px;
-    border: 1px solid #99CEA8;
-    border-radius: 5px;
-
-    backface-visibility: hidden;
-    transition: all .5s;
-    transform-style: preserve-3d;
-}
-
-img {
-    width: 100px;
-    height: 100px;
-}
-
-.back-face {
     transform: rotateY(180deg);
 }
 
-.rotate {
-    transform: rotateY(180deg);
-}
+.card.escolhida .front-face{
+    transform: rotateY(0deg);
+  }
+
+.card.escolhida .back-face {
+    transform: rotateY(-180deg);
+  }
+
+
+
+
+
+
+
 
 .card:hover {
     cursor: pointer;
-} */
-
-/* .card:hover .back-face {
-    transform: rotateY(0deg);
 }
-
-.card:hover .front-face {
-    transform: rotateY(-180deg);
-} */
