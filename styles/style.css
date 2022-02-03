@@ -5,10 +5,100 @@
 }
 
 body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
     background-color: #EEF9BF;
 }
 
-.pagina {
+header {
+    width: 100%;
+    height: 63px;
+    margin-top: 40px;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 56px;
+    font-weight: 700;
+    text-align: center;
+    color: #75B79E;
+}
+
+.tabuleiro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 130px;
+    padding-bottom: 35px;
+    width: 75%;
+    gap: 34px 34px;
+}
+
+.card {
+    width: 117px;
+    height: 146px;
+    position: relative;
+}
+
+img{
+    width: 100px;
+    height: 100px;
+}
+
+.corpo-carta{
+    height: 100%;
+    width: 100%;
+    
+    background: #A7E9AF;
+    border: 1px solid #99CEA8;
+    border-radius: 5px;
+    position: absolute;
+    backface-visibility: hidden;
+    transition: all .5s;
+    transform-style: preserve-3d;
+}
+
+.back-face{
+    background-image: url(/imgs/front.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100px; 
+}
+
+.front-face{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+   transform: rotateY(180deg);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .pagina {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -20,6 +110,10 @@ header {
 }
 
 h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     font-family: 'Roboto', sans-serif;
     font-size: 56px;
     font-weight: 700;
@@ -30,13 +124,26 @@ main {
     display: flex;
     flex-wrap: wrap;
 
-    margin: 0 120px 0 120px;
+    margin: 0 190px 0 120px;
 }
 
 .card {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+
+    margin-left: 150px;
+    margin-bottom: 180px;
+}
+
+.face {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+
     
     background-color: #A7E9AF;
     width: 117px;
@@ -44,11 +151,32 @@ main {
     border: 1px solid #99CEA8;
     border-radius: 5px;
 
-    margin-left: 34px;
-    margin-bottom: 34px;
+    backface-visibility: hidden;
+    transition: all .5s;
+    transform-style: preserve-3d;
 }
 
 img {
     width: 100px;
     height: 100px;
 }
+
+.back-face {
+    transform: rotateY(180deg);
+}
+
+.rotate {
+    transform: rotateY(180deg);
+}
+
+.card:hover {
+    cursor: pointer;
+} */
+
+/* .card:hover .back-face {
+    transform: rotateY(0deg);
+}
+
+.card:hover .front-face {
+    transform: rotateY(-180deg);
+} */
