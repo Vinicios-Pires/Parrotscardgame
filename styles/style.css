@@ -81,6 +81,16 @@ img{
     transform: rotateY(0deg);
   }
 
+.escolhida .front-face{
+    transform: rotateY(0deg);
+    
+  }
+  
+.escolhida .back-face {
+    transform: rotateY(-180deg);
+  }
+
+
 .card.escolhida .back-face {
     transform: rotateY(-180deg);
   }
