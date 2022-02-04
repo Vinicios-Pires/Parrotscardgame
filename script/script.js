@@ -1,6 +1,7 @@
 let numCartas;
-let cartasEscolhidas = []; i = 0;
+let cartasEscolhidas = []; i = 0; j = 0;
 let numJogadas = 0;
+let booleanVirarCarta = true;
 
 function addCartas() {
    
@@ -42,30 +43,51 @@ function addCartas() {
 }
 
 function virarCarta(cartaEscolhida) {
+    
+    if (booleanVirarCarta) {   
+    if (cartasEscolhidas.length <= 2) {
+        
     numJogadas++;
     i++;
     cartaEscolhida.classList.add("escolhida");
-    console.log(cartaEscolhida.innerHTML)
     cartasEscolhidas.push(cartaEscolhida);
-
+    console.log(cartasEscolhidas.length)
+    
     if (i === 2) {
-        if (cartasEscolhidas[i - 2].innerHTML === cartasEscolhidas[i - 1].innerHTML) {
+        if (cartasEscolhidas[i - 2].innerHTML === cartasEscolhidas[i - 1].innerHTML) { 
             cartasEscolhidas[i - 2].removeAttribute("onclick");
             cartasEscolhidas[i - 1].removeAttribute("onclick");
             i = 0;
             cartasEscolhidas = [];
+            setTimeout(fimDeJogo, 1000);
         } else {
+            booleanVirarCarta = false;
             setTimeout(desvirarCarta, 1000);
         }
     }
+    }
+    }    
 }
-
 
 function desvirarCarta() {
     cartasEscolhidas[i - 2].classList.remove("escolhida");
     cartasEscolhidas[i - 1].classList.remove("escolhida");
     cartasEscolhidas = [];
     i = 0;
+    booleanVirarCarta = true
+}
+
+function fimDeJogo() {
+
+    cartasViradas = document.querySelectorAll(".escolhida");
+
+    if (cartasViradas.length === numCartas) {
+        alert(`Você ganhou em ${numJogadas} jogadas`)
+        let playAgain = prompt("Gostaria de jogar novamente? ('s' caso queira)");
+        if (playAgain === "s") {
+            window.location.reload(true);
+        }
+    }
 }
 
 
