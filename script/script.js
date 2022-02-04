@@ -16,13 +16,13 @@ function addCartas() {
         'imgs/unicornparrot.gif'    
     ]
 
+    imgs.sort(comparador);
+
     let par = [];
 
     for (let i = 0; i < (numCartas / 2); i++) {
         par.push(imgs[i], imgs[i]);
     }
-
-    console.log(par);
 
     par.sort(comparador);
 
@@ -38,14 +38,12 @@ function addCartas() {
             </div>
         </div>
         `
-        console.log(par[i]);
     }
 }
 
 function virarCarta(cartaEscolhida) {
-    jogadas++
-    cartaEscolhida.classList.add(".escolhida");
-    console.log("CartaEscolhida: "+cartaEscolhida.par)
+    // jogadas++
+    cartaEscolhida.classList.add("escolhida");
 }
 
 
